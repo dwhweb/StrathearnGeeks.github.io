@@ -6,4 +6,4 @@ weight: 2
 
 The next meetup will be:
 
-Thursday 8th June @ The Tower, Crieff
+Thursday 10th August @ Coorie Inn, Muthill
