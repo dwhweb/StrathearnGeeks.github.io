@@ -1,32 +1,23 @@
-baseURL: 'https://strathearngeeks.github.io/'
-theme: 'lean'
-languageCode: 'en-gb'
-title: 'Strathearn Geeks'
-author: "Strathearn Geeks"
+baseURL: https://strathearngeeks.github.io/
+theme: github.com/dwhweb/strath_geeks_theme
+languageCode: en-gb
+title: Strathearn Geeks
+author: Strathearn Geeks
 canonifyurls: true
-paginate: 3
 
-#googleAnalytics: "G-123456"
+menu:
+  main:
+    - name: Credits
+      url: /credits
+      weight: 10
+
+# Required to stop Hugo from stripping html tags when using markdownify
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 params:
-  tagline: "A meetup for makers, coders, designers, 3d printers, and all tech-minded folks in Crieff and surrounding areas"
-
-  github: "https://github.com/StrathearnGeeks"
-
+  tagline: A meetup for makers, coders, designers, 3d printers, and all tech-minded folks in Crieff and the surrounding areas.
   images:
-    - "favicon.png"
-
-  geo:
-    title       : Crieff Location
-    # Use pixel for width as well
-    width       : 80%
-    height      : 300
-    pre_embed   : https://www.openstreetmap.org/export/embed.html?
-    embed       : bbox=-3.8358002901077275%2C56.37252623676387%2C-3.8330537080764775%2C56.373803644633476&amp;layer=mapnik&amp;marker=56.3731649460514%2C-3.834426999092102
-  geo2:
-    title       : Muthill Location
-    # Use pixel for width as well
-    width       : 80%
-    height      : 300
-    pre_embed   : https://www.openstreetmap.org/export/embed.html?
-    embed       : bbox=-3.833563327789307%2C56.33100798301194%2C-3.830816745758057%2C56.33228678232087&amp;layer=mapnik&amp;marker=56.33164738802241%2C-3.8321900367736816
+    - twitter_card.png

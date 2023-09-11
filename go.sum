@@ -1,0 +1,6 @@
+github.com/dwhweb/strath_geeks_theme v0.0.0-20230814142213-a084872a0724 h1:CG3IwTD1d1gOMcG2wG7WUTDCSLCwTQYtRQ9xNowHxIQ=
+github.com/dwhweb/strath_geeks_theme v0.0.0-20230814142213-a084872a0724/go.mod h1:u8C8lxdlQ/9JngOy2qfjEFg6q2pn1IbVgvifXYyg8R0=
+github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003 h1:pt/JGVD5YYRsVVijOHPZI6YKTUvbR4e0hgV9B0S6rbI=
+github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003/go.mod h1:mvM05r93HiefwoaxQTaYiJxtJAhTebwQtU1Xh/J+Okk=
+github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
+github.com/twbs/bootstrap v5.3.0+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
