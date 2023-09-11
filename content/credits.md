@@ -3,7 +3,7 @@ title: Strathearn Geeks — Credits
 description: The Strathearn Geeks group is a meetup for makers, coders, designers, 3D printers and all tech-minded folks in Crieff and the surrounding areas. Visit our website for more information.
 ---
 
-Site design by Strathearn Geeks, provided under the terms of the GPL3. The Strathearn Geeks site uses the following libraries and resources —
+Site design by Strathearn Geeks/dwhweb, content provided under the terms of the CC BY-SA 4.0. The Strathearn Geeks site uses the following libraries and resources —
 * Static site generator: [Hugo](https://gohugo.io)
 * Frontend framework: [Bootstrap](https://getbootstrap.com/)
 * Particle effects: particles.js by [Vincent Garreau](https://vincentgarreau.com/en)
@@ -16,4 +16,4 @@ Site design by Strathearn Geeks, provided under the terms of the GPL3. The Strat
     * Location icon by [Bai Ha](https://www.vecteezy.com/vector-art/21383213-location-icon-logo-in-flat-logo-for-business-stock-vector)
     * Mail icon by [Amir Ali](https://www.vecteezy.com/vector-art/10002828-envelope-flat-circle-multicolor)
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)

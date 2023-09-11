@@ -1,12 +1,12 @@
 # Strathearn Geeks website
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Overview
 
-This is the Strathearn Geeks website, as presented to Hugo. As such, there is an accompanying theme module [here](https://github.com/dwhweb/strath_geeks_theme) which contains the majority of the meat of the project in terms of HTML templates, Sass stylesheets, Javascript etc. This should be pulled down automatically as a dependency when you run the development server, or perform a build.
+This is the Strathearn Geeks website, as presented to Hugo. As such, there is an accompanying theme module [here](https://github.com/StrathearnGeeks/strath_geeks_theme) which contains the majority of the meat of the project in terms of HTML templates, Sass stylesheets, Javascript etc. This should be pulled down automatically as a dependency when you run the development server, or perform a build.
 
-There is also an accompanying script to generate an .ics calendar file [here.](https://github.com/dwhweb/strath_geeks_cal) 
+There is also an accompanying script to generate an .ics calendar file [here.](https://github.com/StrathearnGeeks/strath_geeks_cal) 
 
 ## Usage
 
@@ -21,7 +21,7 @@ Maps are also generated from the front matter — the value of `name` for each e
 If you want to work on the theme, the best approach is probably to clone the theme repository and add the following as a temporary entry in `go.mod` in the root directory of the website repository —
 
 ```
-replace github.com/dwhweb/strath_geeks_theme => /path/to/local/repository
+replace github.com/StrathearnGeeks/strath_geeks_theme => /path/to/local/repository
 ```
 
 This way the Hugo server will use the local theme instead of pulling the remote theme.
