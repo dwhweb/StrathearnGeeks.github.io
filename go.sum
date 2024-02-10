@@ -1,5 +1,7 @@
 github.com/StrathearnGeeks/strath_geeks_theme v0.0.0-20230911142352-10b0c35533be h1:5B71ssdPsQ/Zrt4B1T6ivporPsGdyhOW891wHiSIkyw=
 github.com/StrathearnGeeks/strath_geeks_theme v0.0.0-20230911142352-10b0c35533be/go.mod h1:M1cQMoLpppuV6j83bZ9MYDnjzQ/ijF1E4Tg3Jgmev1U=
+github.com/StrathearnGeeks/strath_geeks_theme v0.0.0-20240210192921-445499d4ff55 h1:O0OkTuyXq/94eQIqbZ8slhABfz7COdA8it8of6mKg6U=
+github.com/StrathearnGeeks/strath_geeks_theme v0.0.0-20240210192921-445499d4ff55/go.mod h1:M1cQMoLpppuV6j83bZ9MYDnjzQ/ijF1E4Tg3Jgmev1U=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003 h1:pt/JGVD5YYRsVVijOHPZI6YKTUvbR4e0hgV9B0S6rbI=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003/go.mod h1:mvM05r93HiefwoaxQTaYiJxtJAhTebwQtU1Xh/J+Okk=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
