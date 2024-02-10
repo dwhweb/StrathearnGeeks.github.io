@@ -12,8 +12,9 @@ Site design by Strathearn Geeks/dwhweb, content provided under the terms of the 
 * Title font: Space Grotesk Bold by [Florian Karsten](https://fonts.floriankarsten.com/)
 * Vector graphics by [Vecteezy](https://www.vecteezy.com/)
     * Computer by [jemastock](https://www.vecteezy.com/vector-art/3759776-desktop-pop-art-icon)
-    * Clock by [Maman Suryaman](https://www.vecteezy.com/vector-art/16182125-wall-clock-icon-isolated)
+    * Man by [Sigit Sulasmoko ](https://www.vecteezy.com/vector-art/6487917-man-avatar-vector-icon)
     * Location icon by [Bai Ha](https://www.vecteezy.com/vector-art/21383213-location-icon-logo-in-flat-logo-for-business-stock-vector)
+    * Clock by [Maman Suryaman](https://www.vecteezy.com/vector-art/16182125-wall-clock-icon-isolated)
     * Mail icon by [Amir Ali](https://www.vecteezy.com/vector-art/10002828-envelope-flat-circle-multicolor)
 
 [![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
