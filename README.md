@@ -18,13 +18,18 @@ Maps are also generated from the front matter — the value of `name` for each e
 
 ## Development
 
-If you want to work on the theme, the best approach is probably to clone the theme repository and add the following as a temporary entry in `go.mod` in the root directory of the website repository —
+If you want to work on the theme, the best approach is probably to clone the _theme repository_ and add the following as a temporary entry in `go.mod` in the root directory of the _website repository_ —
 
 ```
 replace github.com/StrathearnGeeks/strath_geeks_theme => /path/to/local/repository
 ```
+This way the Hugo server will use the local theme instead of pulling the remote theme. Once you've made your changes to the theme repository and have successfully pushed those changes, be sure to remove the temporary line from `go.mod` and remember to update the reference to the theme in the website repository using —
 
-This way the Hugo server will use the local theme instead of pulling the remote theme.
+```
+hugo mod get -u github.com/StrathearnGeeks/strath_geeks_theme
+```
+
+Otherwise the CI build will break when you attempt to push your website changes.
 
 If you're working on debugging the associated Javascript and changing the date on your system is causing SSL certificate issues that prevent remote resources from loading, you can temporarily disable OCSP stapling in Firefox by going to `about:config` and setting `security.ssl.enable_ocsp_stapling` to `false`. 
 
