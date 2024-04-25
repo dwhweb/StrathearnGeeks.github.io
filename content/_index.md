@@ -1,6 +1,6 @@
 ---
 title: Strathearn Geeks
-description: The Strathearn Geeks group is a meetup for makers, coders, designers, 3D printers and all tech-minded folks in Crieff and the surrounding areas. Visit our website for more information.
+description: The Strathearn Geeks group is a meetup for makers, coders, designers, and other tech-minded folk in Crieff and the surrounding areas. Visit our website for more information.
 info_cards:
     -   image: images/man.svg
         header: Who are we?
