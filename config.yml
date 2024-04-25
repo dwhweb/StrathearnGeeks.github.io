@@ -18,6 +18,6 @@ markup:
       unsafe: true
 
 params:
-  tagline: A meetup for makers, coders, designers, 3d printers, and all tech-minded folks in Crieff and the surrounding areas.
+  tagline: A meetup for makers, coders, designers, and other tech-minded folk in Crieff and the surrounding areas.
   images:
     - twitter_card.png
