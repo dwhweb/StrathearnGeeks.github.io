@@ -1,0 +1,74 @@
+$header_padding: 0.75rem;
+$header_img_height: 3rem;
+
+// Particle styling, additional index specific styles in index.scss
+#particles-js {
+  background-color: $particle_blue;
+  position: absolute;
+  width: 100%;
+  height: (2 * $header_padding) + $header_img_height;
+  z-index: -1;
+}
+
+.page_header {
+  @extend .row;
+
+  padding-top: $header_padding;
+  padding-bottom: $header_padding;
+  width: 100vw;
+
+  // Left column
+  div:first-of-type {
+    @extend .d-flex;
+    @extend .align-items-center;
+
+    // Computer logo
+    img {
+      height: 3rem;
+    }
+
+    // Header image and text
+    a {
+      text-decoration: none;
+      font-size: 1.5rem; 
+      color: $grey_text;
+      white-space: nowrap;
+      @include title-text;
+    }
+  }
+
+  // Right column
+  div:nth-of-type(2) {
+    // Navigation menu
+    nav {
+      @extend .d-flex;
+      @extend .align-items-center;
+      @extend .justify-content-end;
+      height: 3rem;
+
+      ul {
+        padding-left: 0px;
+        margin-bottom: 0px;
+        white-space: nowrap;
+      }
+
+      li {
+        // Menu links
+        a {
+          font-size: 1rem;
+          text-decoration: none;
+          color: $grey_text;
+        }
+
+        display:inline;
+        list-style: none;
+        padding-right: 0.25rem;
+
+        // Github logo
+        img {
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}

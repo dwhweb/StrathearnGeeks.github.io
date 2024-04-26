@@ -1,0 +1,19 @@
+{{ $options := dict "enableSourceMap" true }}
+{{ if hugo.IsProduction}}
+  {{ $options = dict "enableSourceMap" false "outputStyle" "compressed" }}
+{{ end }}
+{{ $styles := resources.GetMatch "scss/styles.scss" }}
+{{/* Use index page specific styles if we're on the index page*/}}
+{{if .IsHome}}
+  {{ $styles = resources.GetMatch "scss/index.scss" }}
+{{end}}
+{{ $styles = $styles | resources.ToCSS $options }}
+{{ if hugo.IsProduction }}
+  {{ $styles = $styles | fingerprint }}
+{{ end }}
+<link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+
+{{/* Use leaflet stylesheet if we're on the index page */}}
+{{if .IsHome}}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+{{end}}

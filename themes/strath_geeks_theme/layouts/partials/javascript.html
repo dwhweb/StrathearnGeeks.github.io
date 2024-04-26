@@ -1,0 +1,18 @@
+{{/* Particles.js */}}
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src={{ (resources.GetMatch "js/particlesjs_load.js").Permalink}}></script>
+
+{{/* Index page Javascript */}}
+{{if .IsHome}}
+  {{ $indexJs := resources.Get "js/index.js" }}
+  {{ $params := dict }}
+  {{ $sourceMap := cond hugo.IsProduction "" "inline" }}
+  {{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
+  {{ $indexJs = $indexJs | js.Build $opts }}
+  {{ if hugo.IsProduction }}
+    {{ $indexJs = $indexJs | fingerprint }}
+  {{ end }}  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/ical.js@1.5.0/build/ical.min.js "></script>
+  <script src="{{$indexJs.RelPermalink}}" {{if hugo.IsProduction}}integrity="{{$indexJs.Data.Integrity}}"{{end}} defer></script>
+{{end}}

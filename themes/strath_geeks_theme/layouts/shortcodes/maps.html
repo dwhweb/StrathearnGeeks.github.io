@@ -1,0 +1,20 @@
+{{with .Page.Params.locations}}
+  <div class="row ps-3 pe-3 pb-3">
+    <div class="accordion" id="maps">
+      {{range $location := .}}
+        {{$prefix := $location.name | anchorize}}
+        <div id={{$prefix}} class="accordion-item" data-location={{$location.name}} data-coords={{$location.coords | jsonify}} data-address={{$location.address | jsonify}}>
+          <h5 class="accordion-header" id="{{$prefix}}-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{$prefix}}-container" aria-expanded="true" aria-controls="{{$prefix}}-container">
+                Where is {{$location.name}}?
+            </button>
+          </h5>
+          <div id="{{$prefix}}-container" class="accordion-collapse collapse" aria-labelledby="{{$prefix}}-heading" data-bs-parent=".accordion">
+            <div class="accordion-body" id="{{$prefix}}-map">
+            </div>
+          </div>
+        </div>
+      {{end}}
+    </div>
+  </div>
+{{end}}

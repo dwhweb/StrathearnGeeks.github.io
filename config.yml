@@ -1,9 +1,13 @@
 baseURL: https://strathearngeeks.github.io/
-theme: github.com/StrathearnGeeks/strath_geeks_theme
 languageCode: en-gb
 title: Strathearn Geeks
 author: Strathearn Geeks
 canonifyurls: true
+
+theme: strath_geeks_theme
+module:
+  imports:
+    path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
 
 menu:
   main:

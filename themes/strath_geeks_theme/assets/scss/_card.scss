@@ -1,0 +1,24 @@
+.card {
+  @extend .d-flex;
+  @extend .flex-row;
+  height: 100%;
+  padding: 1rem;
+  overflow: hidden;
+  
+  background-color: $card_yellow;
+  border: 1px solid shade-color($card_yellow, 10%);
+
+  img {
+    height: 6rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  #date, #time, #location {
+    @extend .fw-bold;
+  }
+
+  p {
+    @extend .placeholder-glow;
+  }
+}

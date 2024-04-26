@@ -1,0 +1,15 @@
+{{with .Page.Params.info_cards}}
+  <div class="row p-3">
+    {{range $info_card := .}}
+      <div class="col-12 col-lg-6 col-xxl-3 pb-3">
+        <div class="card">
+          <img src={{(resources.GetMatch $info_card.image).Permalink}} alt="Information card illustration">
+          <div>
+            <h2>{{$info_card.header}}</h2>
+            <p>{{$info_card.content | markdownify}}</p>
+          </div>
+        </div>
+      </div>
+    {{end}}
+  </div>
+{{end}}

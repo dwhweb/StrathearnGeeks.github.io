@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    {{with default .Summary .Description}}
+      <meta name="description" content="{{.}}">
+    {{end}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{$title := default site.Title .Title}}
+    {{with $title}}<title>{{.}}</title>{{end}}
+    {{template "_internal/opengraph.html" .}}
+    {{template "_internal/twitter_cards.html" .}}
+    {{partial "stylesheets" .}}
+    {{partial "javascript" .}}
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    {{block "main" .}}
+      {{/* Override this block in more specific templates such as index.html */}}
+    {{end}}
+    {{partial "footer" .}}
+  </body>
+</html>

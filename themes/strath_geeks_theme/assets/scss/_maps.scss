@@ -1,0 +1,15 @@
+// Map container
+.accordion-body {
+  height: 40rem;
+}
+
+.accordion {
+  --bs-accordion-active-bg: #{$card_yellow};
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-active-color: none;
+}
+
+.accordion-button {
+  font-size: inherit;
+  font-weight: inherit;
+}

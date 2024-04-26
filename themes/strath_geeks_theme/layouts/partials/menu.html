@@ -1,0 +1,16 @@
+{{with site.Menus.main }} 
+  <nav>
+    <ul>
+      {{range .}}
+        <li>
+          <a href="{{.URL}}">{{.Name | humanize}}</a>
+        </li>
+      {{end}}
+      <li>
+        <a href="https://www.github.com/StrathearnGeeks">
+          <img src={{(resources.GetMatch "**/github.svg").Permalink}} alt="Github logo">
+        </a>
+      </li>
+    </ul> 
+  </nav>
+{{end}}

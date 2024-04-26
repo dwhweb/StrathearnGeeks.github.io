@@ -1,0 +1,40 @@
+$hero_img_height: 15rem;
+$hero_padding: 1rem;
+
+// Increase the height of the particle effect div from sm breakpoint and up
+#particles-js {
+  @include media-breakpoint-up(sm) {
+    height: (2 * $header_padding) + $header_img_height + $hero_img_height + (2 * $hero_padding);
+  }
+}
+
+// Hide the header image and text from sm breakpoint and up
+.page_header {
+  div:first-of-type {
+    a {
+      @extend .d-block;
+      @extend .d-sm-none;
+    }
+  }
+}
+
+// Hero div styling
+.hero {
+  @extend .d-none;
+  @extend .d-sm-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+
+  img {
+    height: $hero_img_height;
+    padding-left: 1rem;
+  }
+
+  h1 {
+    @include title-text;
+    font-size: 3.5rem;
+  }
+
+  padding-top: $hero_padding;
+  padding-bottom: $hero_padding;
+}
