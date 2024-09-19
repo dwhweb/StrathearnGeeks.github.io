@@ -48,19 +48,60 @@ async function getEvents() {
 }
 
 // Iterates over the events from the calendar and returns the next upcoming or current event - we compare based on day only, not time
+// Note this function isn't particulary portable and will break on a different calendar structure than the current one with two recurring events
 async function getNextEvent() {
-  let now = ICAL.Time.now()
+  // For testing purposes
+  // let now = new ICAL.Time({
+  //   year: 2025,
+  //   month: 8,
+  //   day: 1,
+  //   hour: 0,
+  //   minute: 0,
+  //   isDate: false
+  // });
+
+  let now = ICAL.Time.now();
   let events = await getEvents();
-  try {
-    for(e of events) {
-      let event = new ICAL.Event(e);
-      if(now.compareDateOnlyTz(event.startDate, now.zone) === -1 || now.compareDateOnlyTz(event.startDate, now.zone) === 0) {
-        return event;
-      }
+
+  // Slightly confusing in that recurrence rules expand to ICAL.Time instances rather than ICAL.Event instances
+  let expandFirst = new ICAL.RecurExpansion({
+    component: events[0],
+    dtstart: events[0].getFirstPropertyValue("dtstart")
+  });
+
+  let expandSecond = new ICAL.RecurExpansion({
+    component: events[1],
+    dtstart: events[1].getFirstPropertyValue("dtstart")
+  });
+
+  let startTime = expandFirst.next()
+  let firstAssignedLast = true;
+  let event = null;
+
+  // Iterate in an alternating fashion over expandFirst and expandSecond while the event start time is < the current time
+  while(startTime && startTime.compareDateOnlyTz(now, now.zone) === -1) {
+    if(firstAssignedLast) {
+      startTime = expandSecond.next();
+      firstAssignedLast = false;
+    } else {
+      startTime = expandFirst.next();
+      firstAssignedLast = true;
     }
+  }
+
+  if(startTime) {
+    // If we found that the next current event date came from the first event, copy it so we have the correct venue
+    if(firstAssignedLast) {
+      event = new ICAL.Event(events[0]);
+    } else {
+      event = new ICAL.Event(events[1]);
+    }
+
+    // Update our copied event with the correct start time, note the end date is incorrect but it doesn't matter because we don't use it
+    event.startDate = startTime; 
+    return event;
+  } else {
     throw new Error("Error - couldn't find a current or upcoming event in the calendar.", {cause: events});
-  } catch(e) {
-    console.log(e.message);
   }
 }
 
