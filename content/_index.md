@@ -14,7 +14,8 @@ info_cards:
     -   image: images/clock.svg
         header: When is the next meet?
         content: > 
-            The next meetup will be on Thu 9th Oct 2025 at 7.30pm in The Tower, Crieff.
+            The next meetup will be on <span id="date" class="placeholder">date</span> at <span id="time" class="placeholder">time</span>. 
+            You can download an .ics file by clicking [here.](strath_geeks_cal.ics)
     -   image: images/email.svg
         header: Contact us
         content: If you’d like more information, please open a [Github issue](https://github.com/StrathearnGeeks/StrathearnGeeks.github.io/issues) or drop an email to **strathgeeks at emeraldreverie.org.**
