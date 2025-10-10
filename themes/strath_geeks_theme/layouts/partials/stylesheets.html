@@ -7,7 +7,7 @@
 {{if .IsHome}}
   {{ $styles = resources.GetMatch "scss/index.scss" }}
 {{end}}
-{{ $styles = $styles | resources.ToCSS $options }}
+{{ $styles = $styles | css.Sass $options }}
 {{ if hugo.IsProduction }}
   {{ $styles = $styles | fingerprint }}
 {{ end }}
